@@ -9,18 +9,28 @@ package app;
  * @author FAUZI
  */
 public class Barang {
-     private String nama;
-        private int jumlah;
 
-        public Barang(String nama, int jumlah) {
-            this.nama = nama;
-            this.jumlah = jumlah;
-        }
+    private String nama;
+    private int jumlah;
+    private double harga;
 
-        @Override
-        public String toString() {
-            return nama + " - " + jumlah + " pcs";
-        }
+    public void setHarga(double harga) {
+        this.harga = harga;
+    }
+
+    public double getHarga() {
+        return harga;
+    }
+
+    public Barang(String nama, int jumlah) {
+        this.nama = nama;
+        this.jumlah = jumlah;
+    }
+
+    @Override
+    public String toString() {
+        return nama + " - " + jumlah + " pcs";
+    }
 
     public void setNama(String nama) {
         this.nama = nama;

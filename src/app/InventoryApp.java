@@ -49,23 +49,27 @@ public class InventoryApp extends javax.swing.JFrame {
         scrollPane = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblNamaBarang.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblNamaBarang.setText("Nama Barang: ");
-        getContentPane().add(lblNamaBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
+        getContentPane().add(lblNamaBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
 
+        lblJumlah.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lblJumlah.setText("Jumlah: ");
-        getContentPane().add(lblJumlah, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, -1));
-        getContentPane().add(txtNamaBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 190, 40));
+        getContentPane().add(lblJumlah, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+        getContentPane().add(txtNamaBarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 220, 40));
 
         txtJumlah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtJumlahActionPerformed(evt);
             }
         });
-        getContentPane().add(txtJumlah, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 190, 40));
+        getContentPane().add(txtJumlah, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 220, 40));
 
         btnTambah.setText("Tambah");
         btnTambah.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +77,7 @@ public class InventoryApp extends javax.swing.JFrame {
                 btnTambahActionPerformed(evt);
             }
         });
-        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 140, -1));
+        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 140, -1));
 
         btnHapus.setText("Hapus");
         btnHapus.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +85,7 @@ public class InventoryApp extends javax.swing.JFrame {
                 btnHapusActionPerformed(evt);
             }
         });
-        getContentPane().add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 210, 140, -1));
+        getContentPane().add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 140, -1));
 
         listInventaris.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -90,8 +94,8 @@ public class InventoryApp extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(listInventaris);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 300, -1));
-        getContentPane().add(scrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 12, 20));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 320, -1));
+        getContentPane().add(scrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 30, 20));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -104,11 +108,23 @@ public class InventoryApp extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 30, -1));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 30, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("INVENTORY BARANG");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
+        jLabel1.setText("INVENTORIS BARANG");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        jLabel2.setText("TOKO MAJU SEJAHTERA");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, -1, 20));
+
+        jButton1.setText("Hapus Semua");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 320, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -132,6 +148,10 @@ public class InventoryApp extends javax.swing.JFrame {
     private void txtJumlahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJumlahActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtJumlahActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        clearFields();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,7 +191,9 @@ public class InventoryApp extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnTambah;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu jPopupMenu1;
     private javax.swing.JScrollPane jScrollPane1;
@@ -187,7 +209,7 @@ public class InventoryApp extends javax.swing.JFrame {
         Barang barang = new Barang(nama.toString(), jumlah);
         inventaris.add(barang);
         listModel.addElement(barang.toString());
-        
+
         cetakInventaris(inventaris);
     }
 
@@ -197,6 +219,14 @@ public class InventoryApp extends javax.swing.JFrame {
             listModel.remove(index);
         }
         cetakInventaris(inventaris);
+    }
+
+    private void clearFields() {
+        txtNamaBarang.setText("");
+        txtJumlah.setText("");
+        listModel.clear();
+
+//        cetakInventaris(inventaris);
     }
 
     public void cetakInventaris(List<?> list) {
