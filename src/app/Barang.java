@@ -12,15 +12,6 @@ public class Barang {
 
     private String nama;
     private int jumlah;
-    private double harga;
-
-    public void setHarga(double harga) {
-        this.harga = harga;
-    }
-
-    public double getHarga() {
-        return harga;
-    }
 
     public Barang(String nama, int jumlah) {
         this.nama = nama;
